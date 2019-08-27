@@ -1,14 +1,13 @@
 package main
 
 import (
-	"github.com/urfave/cli"
 	"bufio"
 	"fmt"
 	"log"
 	"os"
 	"strings"
 
-	"github.com/urface/cli"
+	"github.com/urfave/cli"
 )
 
 type Result struct {
@@ -35,21 +34,19 @@ func search(query string) {
 }
 
 func main() {
-	var fuzzy bool
 	var query string
-	
+
 	app := cli.NewApp()
 
-	app.Flags = []cli.Flag {
+	app.Flags = []cli.Flag{
 		cli.StringFlag{
-			Name: "query, q",
+			Name:  "query, q",
 			Value: "",
 			Usage: "String to search for",
 		},
 		cli.BoolFlag{
-			Name: "fuzzy",
-			value: false,
-			Usage: "keeping it fuzzy"
+			Name:  "fuzzy",
+			Usage: "keeping it fuzzy",
 		},
 	}
 
